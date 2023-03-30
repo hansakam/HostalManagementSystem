@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="lk.ijse.hostalmanagementsystem.controller.DashBoardFormController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="641.0" prefWidth="1130.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostalmanagementsystem.controller.DashBoardFormController">
+   <children>
+      <Label layoutX="426.0" layoutY="73.0" styleClass="rooms" stylesheets="@style/styleSheet.css" text="Rooms" />
+      <Label layoutX="75.0" layoutY="228.0" styleClass="roomid" stylesheets="@style/styleSheet.css" text="RoomId  :" />
+      <Label layoutX="75.0" layoutY="301.0" styleClass="roomid" stylesheets="@style/styleSheet.css" text="RoomType :" />
+      <JFXTextField layoutX="251.0" layoutY="236.0" prefHeight="25.0" prefWidth="188.0" />
+      <JFXTextField layoutX="251.0" layoutY="308.0" prefHeight="25.0" prefWidth="188.0" />
+      <Label layoutX="608.0" layoutY="229.0" styleClass="roomid" stylesheets="@style/styleSheet.css" text="KeyMoney :" />
+      <JFXTextField layoutX="793.0" layoutY="237.0" prefHeight="25.0" prefWidth="188.0" />
+      <Label layoutX="608.0" layoutY="313.0" styleClass="roomid" stylesheets="@style/styleSheet.css" text="Qty :" />
+      <JFXTextField layoutX="793.0" layoutY="309.0" prefHeight="25.0" prefWidth="188.0" />
+      <JFXButton layoutX="473.0" layoutY="414.0" prefHeight="40.0" prefWidth="123.0" text="Save" />
+   </children>
 </AnchorPane>

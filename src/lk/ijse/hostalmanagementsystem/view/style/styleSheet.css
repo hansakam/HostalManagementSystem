@@ -1,0 +1,56 @@
+.mainpane{
+    -fx-background-color:#9E9E9E;
+}
+.pane{
+    -fx-background-color:#BDBDBD ;
+}
+.signinpane{
+    -fx-background-color:#00B0FF;
+}
+.logbutton{
+    -fx-background-color:#00B0FF;
+    -fx-text-fill:white;
+    -fx-font-size: 25;
+    -fx-font-weight: bold;
+}
+.signinlable{
+    -fx-text-fill:white;
+    -fx-font-size: 30;
+    -fx-font-weight: bold;
+}
+.loginlable{
+    -fx-text-fill:white;
+    -fx-font-size: 25;
+    -fx-font-weight: bold;
+}
+.usernamepane{
+    -fx-background-color:white;
+}
+.password{
+    -fx-background-color:white;
+}
+
+
+
+
+
+
+
+/*rooms fields*/
+.rooms{
+    -fx-text-fill:black;
+    -fx-font-size:38;
+    -fx-font-weight: bold;
+}
+.roomid{
+    -fx-text-fill:black;
+    -fx-font-size:28;
+}
+
+
+
+
+
+
+
+
