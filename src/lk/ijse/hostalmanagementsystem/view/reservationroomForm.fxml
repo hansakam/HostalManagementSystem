@@ -1,14 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="lk.ijse.hostalmanagementsystem.controller.ReservationFormController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="669.0" prefWidth="1112.0" styleClass="reservationformbgcolour" stylesheets="@style/styleSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostalmanagementsystem.controller.ReservationFormController">
+   <children>
+      <Label layoutX="479.0" layoutY="101.0" styleClass="reservationheadLabel" stylesheets="@style/styleSheet.css" text="Resevation" />
+      <TextField layoutX="204.0" layoutY="219.0" prefHeight="37.0" prefWidth="244.0" promptText="Res Id">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="642.0" layoutY="219.0" prefHeight="37.0" prefWidth="244.0" promptText="Date">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="204.0" layoutY="335.0" prefHeight="37.0" prefWidth="244.0" promptText="Student Id">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="642.0" layoutY="335.0" prefHeight="37.0" prefWidth="244.0" promptText="Room Type Id">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="416.0" layoutY="458.0" prefHeight="37.0" prefWidth="244.0" promptText="Status">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </TextField>
+   </children>
 </AnchorPane>

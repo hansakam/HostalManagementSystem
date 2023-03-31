@@ -90,6 +90,20 @@
 
 
 
+        /*reservation*/
+
+.reservationheadLabel{
+    -fx-text-fill:#00B0FF;
+    -fx-font-weight:bold;
+    -fx-font-size: 30;
+}
+
+.reservationformbgcolour{
+    -fx-background-color:#BDBDBD;
+}
+
+
+
 
 
 

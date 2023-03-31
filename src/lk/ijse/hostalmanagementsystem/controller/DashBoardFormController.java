@@ -23,7 +23,7 @@ public class DashBoardFormController implements Initializable {
 
     public Pane contex;
     public AnchorPane mainpane;
-  
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -44,17 +44,18 @@ public class DashBoardFormController implements Initializable {
         Navigation.navigate(Route.DASHBOARDFORM,mainpane);
     }
 
-    public void logoutOnAction(ActionEvent actionEvent) {
-
-    }
+    /*public void logoutOnAction(ActionEvent actionEvent) throws IOException {
+       Navigation.navigate(Route.LOGINFORM,pane);
+    }*/
 
     public void roomOnAction(ActionEvent actionEvent) throws IOException {
-        Navigation.navigate(Route.DASHBOARDFORM,mainpane);
+       setUi("roomForm.fxml");
     }
 
     public void paymentOnAction(ActionEvent actionEvent) {
     }
 
-    public void reservationOnAction(ActionEvent actionEvent) {
+    public void reservationOnAction(ActionEvent actionEvent) throws IOException {
+       setUi("reservationroomForm.fxml");
     }
 }
