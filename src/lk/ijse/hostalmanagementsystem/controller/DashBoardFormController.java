@@ -4,5 +4,18 @@
  */
 package lk.ijse.hostalmanagementsystem.controller;
 
-public class DashBoardFormController {
+
+import javafx.fxml.Initializable;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class DashBoardFormController implements Initializable {
+
+
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+    }
 }

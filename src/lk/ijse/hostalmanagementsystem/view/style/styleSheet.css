@@ -47,6 +47,30 @@
     -fx-font-size:28;
 }
 
+/*Dashboard*/
+
+.dashboardmain{
+    -fx-background-color:#9E9E9E;
+}
+.dashbordshortpane{
+    -fx-background-color:#9E9E9E;
+}
+.Btn:hover{
+
+    -fx-background-color:#00B0FF;
+
+
+}
+.dashinpane{
+    -fx-background-color:white;
+}
+.hoverbtnchange{
+    -fx-text-fill:white;
+    -fx-font-weight: bold;
+    -fx-font-size:26;
+}
+
+
 
 
 
