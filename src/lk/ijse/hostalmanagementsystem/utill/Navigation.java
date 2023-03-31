@@ -19,9 +19,22 @@ public class Navigation {
         Navigation.mainpane.getChildren().clear();
         Stage window = (Stage) Navigation.mainpane.getScene().getWindow();
         switch (route){
+
             case DASHBOARDFORM:
                 window.setTitle("DashBoardForm");
                 initUI("dashboardForm.fxml");
+                break;
+            case STUDENTFORM:
+                window.setTitle("STUDENTFORM");
+                initUI("studentsForm.fxml");
+                break;
+            case ROOMFORM:
+                window.setTitle("ROOMFORM");
+                initUI("roomForm.fxml");
+                break;
+            case RESERVATIONFORM:
+                window.setTitle("RESERVATIONFORM");
+                initUI("reservationroomForm.fxml");
                 break;
         }
 

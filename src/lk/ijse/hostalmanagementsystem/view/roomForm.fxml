@@ -1,14 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="lk.ijse.hostalmanagementsystem.controller.RoomFormController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="669.0" prefWidth="1112.0" styleClass="roomformbgcolour" stylesheets="@style/styleSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostalmanagementsystem.controller.RoomFormController">
+   <children>
+      <Label layoutX="483.0" layoutY="68.0" prefHeight="58.0" prefWidth="146.0" styleClass="roomheadLabel" stylesheets="@style/styleSheet.css" text="Rooms" />
+      <TextField layoutX="230.0" layoutY="206.0" prefHeight="34.0" prefWidth="246.0" promptText="room Type Id">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="610.0" layoutY="206.0" prefHeight="34.0" prefWidth="246.0" promptText="room Type">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="237.0" layoutY="318.0" prefHeight="34.0" prefWidth="246.0" promptText="Key Money">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="610.0" layoutY="318.0" prefHeight="34.0" prefWidth="246.0" promptText="QTY">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </TextField>
+      <JFXButton layoutX="707.0" layoutY="463.0" />
+   </children>
 </AnchorPane>

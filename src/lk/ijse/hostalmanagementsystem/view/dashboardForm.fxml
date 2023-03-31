@@ -9,37 +9,37 @@
    <children>
       <Pane layoutY="-4.0" prefHeight="739.0" prefWidth="250.0" styleClass="dashboardmain" stylesheets="@style/styleSheet.css">
          <children>
-            <JFXButton layoutX="36.0" layoutY="301.0" prefHeight="56.0" prefWidth="178.0" stylesheets="@style/styleSheet.css" text="Resevation">
+            <JFXButton layoutX="36.0" layoutY="301.0" onAction="#reservationOnAction" prefHeight="56.0" prefWidth="178.0" stylesheets="@style/styleSheet.css" text="Resevation">
                <styleClass>
                   <String fx:value="Btn" />
                   <String fx:value="hoverbtnchange" />
                </styleClass>
             </JFXButton>
-            <JFXButton layoutX="36.0" layoutY="411.0" prefHeight="56.0" prefWidth="178.0" stylesheets="@style/styleSheet.css" text="Payment">
+            <JFXButton layoutX="36.0" layoutY="411.0" onAction="#paymentOnAction" prefHeight="56.0" prefWidth="178.0" stylesheets="@style/styleSheet.css" text="Payment">
                <styleClass>
                   <String fx:value="Btn" />
                   <String fx:value="hoverbtnchange" />
                </styleClass>
             </JFXButton>
-            <JFXButton layoutX="36.0" layoutY="506.0" prefHeight="56.0" prefWidth="178.0" stylesheets="@style/styleSheet.css" text="Rooms">
+            <JFXButton layoutX="36.0" layoutY="506.0" onAction="#roomOnAction" prefHeight="56.0" prefWidth="178.0" stylesheets="@style/styleSheet.css" text="Rooms">
                <styleClass>
                   <String fx:value="Btn" />
                   <String fx:value="hoverbtnchange" />
                </styleClass>
             </JFXButton>
-            <JFXButton layoutX="36.0" layoutY="587.0" prefHeight="56.0" prefWidth="178.0" stylesheets="@style/styleSheet.css" text="Student">
+            <JFXButton layoutX="36.0" layoutY="587.0" onAction="#studentFormOnAction" prefHeight="56.0" prefWidth="178.0" stylesheets="@style/styleSheet.css" text="Student">
                <styleClass>
                   <String fx:value="Btn" />
                   <String fx:value="hoverbtnchange" />
                </styleClass>
             </JFXButton>
-            <JFXButton layoutX="36.0" layoutY="669.0" prefHeight="56.0" prefWidth="178.0" stylesheets="@style/styleSheet.css" text="LogOut">
+            <JFXButton layoutX="36.0" layoutY="669.0" onAction="#logoutOnAction" prefHeight="56.0" prefWidth="178.0" stylesheets="@style/styleSheet.css" text="LogOut">
                <styleClass>
                   <String fx:value="Btn" />
                   <String fx:value="hoverbtnchange" />
                </styleClass>
             </JFXButton>
-            <JFXButton layoutX="36.0" layoutY="172.0" prefHeight="56.0" prefWidth="178.0" stylesheets="@style/styleSheet.css" text="Dashboard">
+            <JFXButton layoutX="36.0" layoutY="172.0" onAction="#comeondashboardOnAction" prefHeight="56.0" prefWidth="178.0" stylesheets="@style/styleSheet.css" text="Dashboard">
                <styleClass>
                   <String fx:value="Btn" />
                   <String fx:value="hoverbtnchange" />
@@ -48,6 +48,6 @@
          </children>
       </Pane>
       <Pane layoutX="251.0" prefHeight="63.0" prefWidth="1112.0" styleClass="dashbordshortpane" stylesheets="@style/styleSheet.css" />
-      <Pane fx:id="loadpane" layoutX="250.0" layoutY="64.0" prefHeight="669.0" prefWidth="1112.0" styleClass="dashinpane" stylesheets="@style/styleSheet.css" />
+      <Pane fx:id="contex" layoutX="250.0" layoutY="64.0" prefHeight="669.0" prefWidth="1112.0" styleClass="dashinpane" stylesheets="@style/styleSheet.css" />
    </children>
 </AnchorPane>

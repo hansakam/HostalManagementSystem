@@ -72,6 +72,19 @@
 
 
 
+                    /*Students*/
+
+.sudentheadLabel{
+    -fx-text-fill:#00B0FF;
+    -fx-font-weight:bold;
+    -fx-font-size: 30;
+}
+
+.sudentformbgcolour{
+    -fx-background-color:#BDBDBD;
+}
+
+
 
 
 

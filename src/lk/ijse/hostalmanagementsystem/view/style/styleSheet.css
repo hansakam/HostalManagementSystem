@@ -36,18 +36,21 @@
 
 
 
-/*rooms fields*/
-.rooms{
-    -fx-text-fill:black;
-    -fx-font-size:38;
-    -fx-font-weight: bold;
-}
-.roomid{
-    -fx-text-fill:black;
-    -fx-font-size:28;
+                /*rooms fields*/
+
+
+.roomheadLabel{
+    -fx-text-fill:#00B0FF;
+    -fx-font-weight:bold;
+    -fx-font-size: 40;
 }
 
-/*Dashboard*/
+.roomformbgcolour{
+    -fx-background-color:#BDBDBD;
+}
+
+
+            /*Dashboard*/
 
 .dashboardmain{
     -fx-background-color:#9E9E9E;
@@ -70,6 +73,19 @@
     -fx-font-size:26;
 }
 
+
+
+                    /*Students*/
+
+.sudentheadLabel{
+    -fx-text-fill:#00B0FF;
+    -fx-font-weight:bold;
+    -fx-font-size: 30;
+}
+
+.sudentformbgcolour{
+    -fx-background-color:#BDBDBD;
+}
 
 
 
