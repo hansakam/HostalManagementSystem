@@ -24,6 +24,7 @@ public class StudentsFormController {
     }
 
     public void addOnAction(ActionEvent actionEvent) {
+
     }
 
     public void updateOnAction(ActionEvent actionEvent) {

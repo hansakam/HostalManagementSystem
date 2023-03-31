@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
 <?import java.net.URL?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="669.0" prefWidth="1112.0" styleClass="sudentformbgcolour" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostalmanagementsystem.controller.StudentsFormController">
    <children>
-      <TextField layoutX="159.0" layoutY="147.0" prefHeight="25.0" prefWidth="243.0" promptText="Student id">
+      <TextField fx:id="sid" layoutX="159.0" layoutY="147.0" prefHeight="25.0" prefWidth="243.0" promptText="Student id">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </TextField>
-      <TextField layoutX="608.0" layoutY="147.0" prefHeight="25.0" prefWidth="243.0" promptText="Student  Name">
+      <TextField fx:id="nameId" layoutX="608.0" layoutY="147.0" prefHeight="25.0" prefWidth="243.0" promptText="Student  Name">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </TextField>
-      <TextField layoutX="159.0" layoutY="237.0" prefHeight="25.0" prefWidth="243.0" promptText="Student  Address">
+      <TextField fx:id="address" layoutX="159.0" layoutY="237.0" prefHeight="25.0" prefWidth="243.0" promptText="Student  Address">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </TextField>
-      <TextField layoutX="608.0" layoutY="237.0" prefHeight="25.0" prefWidth="243.0" promptText="Student  Contact">
+      <TextField fx:id="contactId" layoutX="608.0" layoutY="237.0" prefHeight="25.0" prefWidth="243.0" promptText="Student  Contact">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </TextField>
-      <TextField layoutX="159.0" layoutY="320.0" prefHeight="25.0" prefWidth="243.0" promptText="Student  DOB Date">
-         <font>
-            <Font name="System Bold" size="13.0" />
-         </font>
-      </TextField>
-      <TextField layoutX="608.0" layoutY="320.0" prefHeight="25.0" prefWidth="243.0" promptText="Student  Gender">
+      <TextField fx:id="dob" layoutX="159.0" layoutY="320.0" prefHeight="25.0" prefWidth="243.0" promptText="Student  DOB Date">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </TextField>
       <Label layoutX="431.0" layoutY="37.0" styleClass="sudentheadLabel" stylesheets="@style/styleSheet.css" text="Students" />
+      <JFXComboBox fx:id="genId" layoutX="608.0" layoutY="322.0" onAction="#genderOnAction" prefHeight="25.0" prefWidth="243.0" promptText="Gender" />
+      <JFXButton fx:id="addId" layoutX="556.0" layoutY="478.0" onAction="#addOnAction" text="Add" />
+      <JFXButton fx:id="deleteid" layoutX="363.0" layoutY="478.0" onAction="#deleteOnAction" text="Delete" />
+      <JFXButton fx:id="update" layoutX="253.0" layoutY="478.0" onAction="#updateOnAction" text="Update" />
    </children>
    <stylesheets>
       <URL value="@style/styleSheet.css" />

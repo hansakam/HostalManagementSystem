@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="669.0" prefWidth="1112.0" styleClass="Paymentformbgcolour" stylesheets="@style/styleSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostalmanagementsystem.controller.PaymentFormController">
+   <children>
+      <Label layoutX="494.0" layoutY="117.0" styleClass="PaymentheadLabel" stylesheets="@style/styleSheet.css" text="Payment" />
+   </children>
+</AnchorPane>
