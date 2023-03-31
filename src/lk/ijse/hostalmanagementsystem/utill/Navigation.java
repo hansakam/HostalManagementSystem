@@ -36,6 +36,10 @@ public class Navigation {
                 window.setTitle("RESERVATIONFORM");
                 initUI("reservationroomForm.fxml");
                 break;
+            case PAYMENT:
+                window.setTitle("PAYMENT");
+                initUI("paymentForm.fxml");
+                break;
         }
 
     }

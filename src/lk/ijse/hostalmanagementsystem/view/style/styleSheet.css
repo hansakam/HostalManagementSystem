@@ -101,9 +101,28 @@
 .reservationformbgcolour{
     -fx-background-color:#BDBDBD;
 }
+.resid{
+    -fx-font-size: 13;
+    -fx-font-weight:bold;
+}
+
+.resdate{
+    -fx-font-size: 13;
+    -fx-font-weight:bold;
+}
 
 
+    /*Payment*/
 
+.PaymentheadLabel{
+    -fx-text-fill:#00B0FF;
+    -fx-font-weight:bold;
+    -fx-font-size: 30;
+}
+
+.Paymentformbgcolour{
+    -fx-background-color:#BDBDBD;
+}
 
 
 

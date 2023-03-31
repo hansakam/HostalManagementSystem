@@ -33,4 +33,10 @@ public class LoginFormController implements Initializable {
     public void loginOnAction(ActionEvent actionEvent) throws IOException {
         Navigation.navigate(Route.DASHBOARDFORM,pane);
     }
+
+    public void userOnAction(ActionEvent actionEvent) {
+    }
+
+    public void paswordOnAction(ActionEvent actionEvent) {
+    }
 }

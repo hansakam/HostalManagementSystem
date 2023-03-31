@@ -44,15 +44,16 @@ public class DashBoardFormController implements Initializable {
         Navigation.navigate(Route.DASHBOARDFORM,mainpane);
     }
 
-    /*public void logoutOnAction(ActionEvent actionEvent) throws IOException {
-       Navigation.navigate(Route.LOGINFORM,pane);
-    }*/
+    public void logoutOnAction(ActionEvent actionEvent) throws IOException {
+       //Navigation.navigate(Route.LOGINFORM,pane);
+    }
 
     public void roomOnAction(ActionEvent actionEvent) throws IOException {
        setUi("roomForm.fxml");
     }
 
-    public void paymentOnAction(ActionEvent actionEvent) {
+    public void paymentOnAction(ActionEvent actionEvent) throws IOException {
+        setUi("paymentForm.fxml");
     }
 
     public void reservationOnAction(ActionEvent actionEvent) throws IOException {
