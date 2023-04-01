@@ -1,28 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="669.0" prefWidth="1112.0" styleClass="reservationformbgcolour" stylesheets="@style/styleSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostalmanagementsystem.controller.ReservationFormController">
    <children>
       <Label layoutX="479.0" layoutY="101.0" styleClass="reservationheadLabel" stylesheets="@style/styleSheet.css" text="Resevation" />
-      <TextField fx:id="studentid" layoutX="204.0" layoutY="335.0" prefHeight="37.0" prefWidth="244.0" promptText="Student Id">
-         <font>
-            <Font name="System Bold" size="13.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="roomtypeid" layoutX="642.0" layoutY="335.0" prefHeight="37.0" prefWidth="244.0" promptText="Room Type Id">
-         <font>
-            <Font name="System Bold" size="13.0" />
-         </font>
-      </TextField>
-      <JFXComboBox fx:id="statusId" layoutX="211.0" layoutY="434.0" onAction="#statusOnAction" prefHeight="30.0" prefWidth="244.0" promptText="Status" />
-      <Label fx:id="residLbl" layoutX="264.0" layoutY="219.0" prefHeight="37.0" prefWidth="184.0" />
+      <JFXComboBox fx:id="combostatus" layoutX="211.0" layoutY="434.0" prefHeight="30.0" prefWidth="244.0" promptText="Status" />
+      <Label fx:id="lblresid" layoutX="264.0" layoutY="219.0" prefHeight="37.0" prefWidth="184.0" />
       <Label layoutX="204.0" layoutY="219.0" prefHeight="37.0" prefWidth="45.0" styleClass="resid" stylesheets="@style/styleSheet.css" text="Res Id :" />
-      <Label fx:id="reslbldate" layoutX="679.0" layoutY="209.0" prefHeight="37.0" prefWidth="184.0" />
+      <Label fx:id="lbldate" layoutX="679.0" layoutY="209.0" prefHeight="37.0" prefWidth="184.0" />
       <Label fx:id="residLbl11" layoutX="642.0" layoutY="209.0" prefHeight="37.0" prefWidth="73.0" styleClass="resdate" stylesheets="@style/styleSheet.css" text="Date  :" />
+      <JFXComboBox fx:id="combostudentid" layoutX="211.0" layoutY="339.0" prefHeight="30.0" prefWidth="244.0" promptText="Student Id" />
+      <JFXComboBox fx:id="comboroomtype" layoutX="626.0" layoutY="339.0" prefHeight="30.0" prefWidth="244.0" promptText="Room Type Id" />
+      <JFXButton layoutX="531.0" layoutY="573.0" onAction="#BTNsaveOnAction" text="Save" />
    </children>
 </AnchorPane>

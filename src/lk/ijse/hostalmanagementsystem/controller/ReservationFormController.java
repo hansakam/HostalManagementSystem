@@ -10,13 +10,16 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 public class ReservationFormController {
-    public TextField studentid;
-    public TextField roomtypeid;
-    public JFXComboBox statusId;
-    public Label residLbl;
-    public Label reslbldate;
-    public Label residLbl11;
 
-    public void statusOnAction(ActionEvent actionEvent) {
+    public JFXComboBox statusId;
+    public Label residLbl11;
+    public JFXComboBox comboroomtype;
+    public JFXComboBox combostudentid;
+    public Label lbldate;
+    public Label lblresid;
+    public JFXComboBox combostatus;
+
+
+    public void BTNsaveOnAction(ActionEvent actionEvent) {
     }
 }
