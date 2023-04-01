@@ -2,15 +2,15 @@
  * @author :Hansaka Malshan
  * created 4/1/2023---7:39 PM
  */
-package lk.ijse.hostalmanagementsystem.bo;
+package lk.ijse.hostalmanagementsystem.bo.custom.impl;
 
+import lk.ijse.hostalmanagementsystem.bo.custom.RoomBO;
 import lk.ijse.hostalmanagementsystem.dao.DAOFactory;
-import lk.ijse.hostalmanagementsystem.dao.RoomDAO;
-import lk.ijse.hostalmanagementsystem.dao.SuperDAO;
+import lk.ijse.hostalmanagementsystem.dao.custom.RoomDAO;
 import lk.ijse.hostalmanagementsystem.dto.RoomDTO;
 import lk.ijse.hostalmanagementsystem.entity.RoomEntity;
 
-public class RoomBOImpl implements RoomBO{
+public class RoomBOImpl implements RoomBO {
 
                    /*create daofactorymathod*/
 

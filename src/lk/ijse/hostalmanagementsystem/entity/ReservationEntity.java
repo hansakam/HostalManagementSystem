@@ -8,10 +8,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
@@ -27,4 +28,14 @@ public class ReservationEntity {
     private String roomtypeid;
     private String status;
 
+  /*  @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name ="sid",referencedColumnName = "sid")
+    private ReservationEntity studententity;
+
+
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "res_id",referencedColumnName = "res_id")
+    private RoomEntity roomEntity;
+*/
 }

@@ -4,6 +4,11 @@
  */
 package lk.ijse.hostalmanagementsystem.bo;
 
+import lk.ijse.hostalmanagementsystem.bo.custom.impl.PaymentBOImpl;
+import lk.ijse.hostalmanagementsystem.bo.custom.impl.ReservationBOImpl;
+import lk.ijse.hostalmanagementsystem.bo.custom.impl.RoomBOImpl;
+import lk.ijse.hostalmanagementsystem.bo.custom.impl.StudentBOImpl;
+
 public class BOFactory {
     private static BOFactory boFactory;
 
@@ -17,7 +22,7 @@ public class BOFactory {
         return boFactory;
     }
     public enum BOTypes{
-        STUDENT,ROOM
+        STUDENT,ROOM,RESERVATION,PAYMENT
     }
     public SuperBO getBO(BOTypes types){
       switch (types){
@@ -25,7 +30,10 @@ public class BOFactory {
               return new StudentBOImpl();
           case ROOM:
               return new RoomBOImpl();
-
+          case PAYMENT:
+              return new PaymentBOImpl();
+          case RESERVATION:
+              return new ReservationBOImpl();
           default:
               return null;
       }

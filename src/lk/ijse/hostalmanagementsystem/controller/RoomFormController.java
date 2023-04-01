@@ -12,8 +12,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
 import lk.ijse.hostalmanagementsystem.bo.BOFactory;
-import lk.ijse.hostalmanagementsystem.bo.RoomBO;
-import lk.ijse.hostalmanagementsystem.bo.SuperBO;
+import lk.ijse.hostalmanagementsystem.bo.custom.RoomBO;
 import lk.ijse.hostalmanagementsystem.dto.RoomDTO;
 
 import java.net.URL;

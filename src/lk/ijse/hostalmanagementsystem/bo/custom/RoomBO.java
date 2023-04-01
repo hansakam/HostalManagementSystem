@@ -1,5 +1,6 @@
-package lk.ijse.hostalmanagementsystem.bo;
+package lk.ijse.hostalmanagementsystem.bo.custom;
 
+import lk.ijse.hostalmanagementsystem.bo.SuperBO;
 import lk.ijse.hostalmanagementsystem.dao.CrudDAO;
 import lk.ijse.hostalmanagementsystem.dto.RoomDTO;
 import lk.ijse.hostalmanagementsystem.dto.StudentDTO;

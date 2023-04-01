@@ -2,14 +2,15 @@
  * @author :Hansaka Malshan
  * created 4/1/2023---1:46 AM
  */
-package lk.ijse.hostalmanagementsystem.bo;
+package lk.ijse.hostalmanagementsystem.bo.custom.impl;
 
+import lk.ijse.hostalmanagementsystem.bo.custom.StudentBO;
 import lk.ijse.hostalmanagementsystem.dao.DAOFactory;
-import lk.ijse.hostalmanagementsystem.dao.StudentDAO;
+import lk.ijse.hostalmanagementsystem.dao.custom.StudentDAO;
 import lk.ijse.hostalmanagementsystem.dto.StudentDTO;
 import lk.ijse.hostalmanagementsystem.entity.StudentEntity;
 
-public class StudentBOImpl implements StudentBO{
+public class StudentBOImpl implements StudentBO {
 
     StudentDAO studentDAO = (StudentDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOTypes.STUDENT);
 

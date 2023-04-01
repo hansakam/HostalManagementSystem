@@ -4,6 +4,7 @@
  */
 package lk.ijse.hostalmanagementsystem.utill;
 
+import lk.ijse.hostalmanagementsystem.entity.ReservationEntity;
 import lk.ijse.hostalmanagementsystem.entity.RoomEntity;
 import lk.ijse.hostalmanagementsystem.entity.StudentEntity;
 import org.hibernate.Session;
@@ -17,8 +18,10 @@ public class FactoryConfiguration {
     public FactoryConfiguration() {
        sessionFactory = (SessionFactory) new Configuration().mergeProperties(Utility.getProperties())
        .addAnnotatedClass(StudentEntity.class)
-        .addAnnotatedClass(RoomEntity.class)
-        .buildSessionFactory();
+       .addAnnotatedClass(RoomEntity.class)
+       .addAnnotatedClass(ReservationEntity.class)
+       .buildSessionFactory();
+
 
 
 

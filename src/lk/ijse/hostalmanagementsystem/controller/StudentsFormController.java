@@ -13,7 +13,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
 import lk.ijse.hostalmanagementsystem.bo.BOFactory;
-import lk.ijse.hostalmanagementsystem.bo.StudentBO;
+import lk.ijse.hostalmanagementsystem.bo.custom.StudentBO;
 import lk.ijse.hostalmanagementsystem.dto.StudentDTO;
 
 import java.net.URL;

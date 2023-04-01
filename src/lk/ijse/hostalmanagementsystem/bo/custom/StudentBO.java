@@ -1,8 +1,9 @@
-package lk.ijse.hostalmanagementsystem.bo;
+package lk.ijse.hostalmanagementsystem.bo.custom;
 
+import lk.ijse.hostalmanagementsystem.bo.SuperBO;
 import lk.ijse.hostalmanagementsystem.dto.StudentDTO;
 
-public interface StudentBO extends SuperBO{
+public interface StudentBO extends SuperBO {
     void saveStudent(StudentDTO dto);
     void updateStudent(StudentDTO dto);
     StudentDTO searchStudent(String id);

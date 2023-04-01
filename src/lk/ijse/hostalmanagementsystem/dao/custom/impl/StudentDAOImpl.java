@@ -1,17 +1,19 @@
 /**
  * @author :Hansaka Malshan
- * created 4/1/2023---6:59 PM
+ * created 4/1/2023---12:55 AM
  */
-package lk.ijse.hostalmanagementsystem.dao;
+package lk.ijse.hostalmanagementsystem.dao.custom.impl;
 
-import lk.ijse.hostalmanagementsystem.entity.RoomEntity;
+import lk.ijse.hostalmanagementsystem.dao.custom.StudentDAO;
+import lk.ijse.hostalmanagementsystem.entity.StudentEntity;
 import lk.ijse.hostalmanagementsystem.utill.FactoryConfiguration;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-public class RoomDAOImpl implements RoomDAO{
+public class StudentDAOImpl implements StudentDAO {
     @Override
-    public void save(RoomEntity entity) {
+    public void save(StudentEntity entity) {
+
         Session session = new FactoryConfiguration().getinstance().getsession();
         Transaction transaction = session.beginTransaction();
         session.save(entity);
@@ -20,31 +22,32 @@ public class RoomDAOImpl implements RoomDAO{
     }
 
     @Override
-    public void update(RoomEntity entity) {
+    public void update(StudentEntity entity) {
         Session session = new FactoryConfiguration().getinstance().getsession();
         Transaction transaction = session.beginTransaction();
         session.update(entity);
         transaction.commit();
         session.close();
+
     }
 
     @Override
-    public RoomEntity search(String id) {
+    public StudentEntity search(String id) {
         Session session = new FactoryConfiguration().getinstance().getsession();
         Transaction transaction = session.beginTransaction();
-        RoomEntity entity = session.get(RoomEntity.class, id);
+       StudentEntity entity= session.get(StudentEntity.class,id);
+        System.out.println();
         transaction.commit();
         session.close();
         return entity;
-
     }
 
     @Override
     public void delete(String id) {
         Session session = new FactoryConfiguration().getinstance().getsession();
         Transaction transaction = session.beginTransaction();
-        RoomEntity roomEntity = session.get(RoomEntity.class, id);
-        session.delete(roomEntity);
+        StudentEntity entity = session.get(StudentEntity.class, id);
+        session.delete(entity);
         transaction.commit();
         session.close();
 
