@@ -10,17 +10,17 @@
 <AnchorPane prefHeight="669.0" prefWidth="1112.0" styleClass="roomformbgcolour" stylesheets="@style/styleSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostalmanagementsystem.controller.RoomFormController">
    <children>
       <Label layoutX="483.0" layoutY="68.0" prefHeight="58.0" prefWidth="146.0" styleClass="roomheadLabel" stylesheets="@style/styleSheet.css" text="Rooms" />
-      <TextField layoutX="230.0" layoutY="206.0" prefHeight="34.0" prefWidth="246.0" promptText="room Type Id">
+      <TextField fx:id="Txtrtid" layoutX="230.0" layoutY="206.0" prefHeight="34.0" prefWidth="246.0" promptText="room Type Id">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </TextField>
-      <TextField layoutX="237.0" layoutY="318.0" prefHeight="34.0" prefWidth="246.0" promptText="Key Money">
+      <TextField fx:id="Txtkeymoney" layoutX="237.0" layoutY="318.0" prefHeight="34.0" prefWidth="246.0" promptText="Key Money">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </TextField>
-      <TextField layoutX="610.0" layoutY="318.0" prefHeight="34.0" prefWidth="246.0" promptText="QTY">
+      <TextField fx:id="Txtqty" layoutX="610.0" layoutY="318.0" prefHeight="34.0" prefWidth="246.0" promptText="QTY">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -29,6 +29,6 @@
       <JFXButton fx:id="SearchBtn" layoutX="548.0" layoutY="476.0" onAction="#SearchOnAction" text="Search" />
       <JFXButton fx:id="updateBtn" layoutX="431.0" layoutY="476.0" onAction="#updateOnAction" text="Update" />
       <JFXButton fx:id="deleteBtn" layoutX="264.0" layoutY="476.0" onAction="#DeleteOnAction" text="Delete" />
-      <JFXComboBox fx:id="roomtypeCombo" layoutX="610.0" layoutY="211.0" onAction="#RoomTypeComboOnAction" prefHeight="25.0" prefWidth="246.0" promptText="Room Type" />
+      <JFXComboBox fx:id="roomtypeCombo" layoutX="610.0" layoutY="211.0" prefHeight="25.0" prefWidth="246.0" promptText="Room Type" />
    </children>
 </AnchorPane>
