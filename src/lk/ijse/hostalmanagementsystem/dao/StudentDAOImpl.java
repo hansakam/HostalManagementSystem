@@ -21,17 +21,28 @@ public class StudentDAOImpl implements StudentDAO{
     }
 
     @Override
-    public void update(StudentEntity dto) {
+    public void update(StudentEntity entity) {
+        Session session = new FactoryConfiguration().getinstance().getsession();
+        Transaction transaction = session.beginTransaction();
+        session.update(entity);
+        transaction.commit();
+        session.close();
 
     }
 
     @Override
     public StudentEntity search(String s) {
+
         return null;
     }
 
     @Override
-    public void delete(String delete) {
+    public void delete(String id) {
+        Session session = new FactoryConfiguration().getinstance().getsession();
+        Transaction transaction = session.beginTransaction();
+        session.delete(id);
+        transaction.commit();
+        session.close();
 
     }
 }

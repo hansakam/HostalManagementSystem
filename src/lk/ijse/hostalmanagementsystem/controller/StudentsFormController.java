@@ -48,9 +48,13 @@ public class StudentsFormController implements Initializable {
     }
 
     public void updateOnAction(ActionEvent actionEvent) {
+
+
+        studentBO.updateStudent(new Studentdto(TxtSid.getText(),TxtSname.getText(),TxtAddress.getText(),TxtContact.getText(),combodatepic.getValue(),(String) Combogender.getValue()));
     }
 
     public void deleteOnAction(ActionEvent actionEvent) {
+
     }
 
     @Override

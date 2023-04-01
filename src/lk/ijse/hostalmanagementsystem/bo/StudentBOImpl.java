@@ -23,6 +23,7 @@ public class StudentBOImpl implements StudentBO{
 
     @Override
     public void updateStudent(Studentdto dto) {
+        studentDAO.update(new StudentEntity(dto.getSid(),dto.getName(),dto.getAddress(),dto.getContact(),dto.getDob(),dto.getGender()));
 
     }
 
