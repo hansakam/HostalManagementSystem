@@ -6,8 +6,7 @@ package lk.ijse.hostalmanagementsystem.bo;
 
 import lk.ijse.hostalmanagementsystem.dao.DAOFactory;
 import lk.ijse.hostalmanagementsystem.dao.StudentDAO;
-import lk.ijse.hostalmanagementsystem.dao.SuperDAO;
-import lk.ijse.hostalmanagementsystem.dto.Studentdto;
+import lk.ijse.hostalmanagementsystem.dto.StudentDTO;
 import lk.ijse.hostalmanagementsystem.entity.StudentEntity;
 
 public class StudentBOImpl implements StudentBO{
@@ -17,20 +16,20 @@ public class StudentBOImpl implements StudentBO{
 
 
     @Override
-    public void saveStudent(Studentdto dto) {
+    public void saveStudent(StudentDTO dto) {
         studentDAO.save(new StudentEntity(dto.getSid(),dto.getName(),dto.getAddress(),dto.getContact(),dto.getDob(),dto.getGender()));
     }
 
     @Override
-    public void updateStudent(Studentdto dto) {
+    public void updateStudent(StudentDTO dto) {
         studentDAO.update(new StudentEntity(dto.getSid(),dto.getName(),dto.getAddress(),dto.getContact(),dto.getDob(),dto.getGender()));
 
     }
 
     @Override
-    public Studentdto searchStudent(String id) {
+    public StudentDTO searchStudent(String id) {
         StudentEntity  entity=studentDAO.search(id);
-        return new Studentdto(
+        return new StudentDTO(
        entity.getSid(),entity.getName(),entity.getAddress(),entity.getContact(),entity.getDob(),entity.getGender());
 
     }

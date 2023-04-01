@@ -14,7 +14,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
 import lk.ijse.hostalmanagementsystem.bo.BOFactory;
 import lk.ijse.hostalmanagementsystem.bo.StudentBO;
-import lk.ijse.hostalmanagementsystem.dto.Studentdto;
+import lk.ijse.hostalmanagementsystem.dto.StudentDTO;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -42,7 +42,7 @@ public class StudentsFormController implements Initializable {
     public void addOnAction(ActionEvent actionEvent) {
 
 
-        studentBO.saveStudent(new Studentdto(TxtSid.getText(),TxtSname.getText(),TxtAddress.getText(),TxtContact.getText(),combodatepic.getValue(),(String) Combogender.getValue()));
+        studentBO.saveStudent(new StudentDTO(TxtSid.getText(),TxtSname.getText(),TxtAddress.getText(),TxtContact.getText(),combodatepic.getValue(),(String) Combogender.getValue()));
 
 
     }
@@ -50,7 +50,7 @@ public class StudentsFormController implements Initializable {
     public void updateOnAction(ActionEvent actionEvent) {
 
 
-        studentBO.updateStudent(new Studentdto(TxtSid.getText(),TxtSname.getText(),TxtAddress.getText(),TxtContact.getText(),combodatepic.getValue(),(String) Combogender.getValue()));
+        studentBO.updateStudent(new StudentDTO(TxtSid.getText(),TxtSname.getText(),TxtAddress.getText(),TxtContact.getText(),combodatepic.getValue(),(String) Combogender.getValue()));
     }
 
     public void deleteOnAction(ActionEvent actionEvent) {
@@ -75,13 +75,13 @@ public class StudentsFormController implements Initializable {
 
     public void searchOnAction(ActionEvent actionEvent) {
 
-        Studentdto student = studentBO.searchStudent(TxtSid.getText());
+        StudentDTO student = studentBO.searchStudent(TxtSid.getText());
         if(student!=null){
             FillData(student);
         }
     }
 
-    public  void FillData(Studentdto dto){
+    public  void FillData(StudentDTO dto){
         TxtSid.setText(dto.getSid());
         TxtSname.setText(dto.getName());
         TxtAddress.setText(dto.getAddress());

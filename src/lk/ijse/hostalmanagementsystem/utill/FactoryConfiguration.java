@@ -16,6 +16,7 @@ public class FactoryConfiguration {
     public FactoryConfiguration() {
        sessionFactory = (SessionFactory) new Configuration().mergeProperties(Utility.getProperties())
        .addAnnotatedClass(StudentEntity.class)
+        .addAnnotatedClass()
         .buildSessionFactory();
 
 

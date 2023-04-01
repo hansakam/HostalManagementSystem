@@ -15,7 +15,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Studentdto {
+public class StudentDTO {
     private String sid;
     private String name;
     private String address;
