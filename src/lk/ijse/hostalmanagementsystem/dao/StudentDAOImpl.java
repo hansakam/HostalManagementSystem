@@ -31,16 +31,22 @@ public class StudentDAOImpl implements StudentDAO{
     }
 
     @Override
-    public StudentEntity search(String s) {
-
-        return null;
+    public StudentEntity search(String id) {
+        Session session = new FactoryConfiguration().getinstance().getsession();
+        Transaction transaction = session.beginTransaction();
+       StudentEntity entity= session.get(StudentEntity.class,id);
+        System.out.println();
+        transaction.commit();
+        session.close();
+        return entity;
     }
 
     @Override
     public void delete(String id) {
         Session session = new FactoryConfiguration().getinstance().getsession();
         Transaction transaction = session.beginTransaction();
-        session.delete(id);
+        StudentEntity entity = session.get(StudentEntity.class, id);
+        session.delete(entity);
         transaction.commit();
         session.close();
 

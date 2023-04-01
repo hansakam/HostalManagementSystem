@@ -55,6 +55,8 @@ public class StudentsFormController implements Initializable {
 
     public void deleteOnAction(ActionEvent actionEvent) {
 
+        studentBO.deleteStudent(TxtSid.getText());
+
     }
 
     @Override
@@ -67,5 +69,38 @@ public class StudentsFormController implements Initializable {
         Combogender.setItems(genderlist);
 
 
+        initUi();
+
     }
+
+    public void searchOnAction(ActionEvent actionEvent) {
+
+        Studentdto student = studentBO.searchStudent(TxtSid.getText());
+        if(student!=null){
+            FillData(student);
+        }
+    }
+
+    public  void FillData(Studentdto dto){
+        TxtSid.setText(dto.getSid());
+        TxtSname.setText(dto.getName());
+        TxtAddress.setText(dto.getAddress());
+        TxtContact.setText(dto.getContact());
+        combodatepic.setValue(dto.getDob());
+        Combogender.setValue(dto.getGender());
+    }
+    private void initUi(){
+        TxtSid.clear();
+        TxtSname.clear();
+        TxtAddress.clear();
+        TxtContact.clear();
+        combodatepic.clipProperty();
+        Combogender.clipProperty();
+
+
+
+
+    }
+
+
 }

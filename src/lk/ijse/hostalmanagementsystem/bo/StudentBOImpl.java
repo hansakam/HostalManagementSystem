@@ -29,11 +29,15 @@ public class StudentBOImpl implements StudentBO{
 
     @Override
     public Studentdto searchStudent(String id) {
-        return null;
+        StudentEntity  entity=studentDAO.search(id);
+        return new Studentdto(
+       entity.getSid(),entity.getName(),entity.getAddress(),entity.getContact(),entity.getDob(),entity.getGender());
+
     }
 
     @Override
     public void deleteStudent(String id) {
+        studentDAO.delete(id);
 
     }
 }

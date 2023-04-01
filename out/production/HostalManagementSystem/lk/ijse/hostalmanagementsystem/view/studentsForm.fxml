@@ -37,6 +37,7 @@
       <JFXButton fx:id="deleteid" layoutX="363.0" layoutY="478.0" onAction="#deleteOnAction" text="Delete" />
       <JFXButton fx:id="update" layoutX="253.0" layoutY="478.0" onAction="#updateOnAction" text="Update" />
       <JFXDatePicker fx:id="combodatepic" layoutX="171.0" layoutY="322.0" prefHeight="25.0" prefWidth="225.0" promptText="Date Of Birth" />
+      <JFXButton layoutX="119.0" layoutY="466.0" onAction="#searchOnAction" text="Search" />
    </children>
    <stylesheets>
       <URL value="@style/styleSheet.css" />
