@@ -31,7 +31,7 @@ public class StudentDAOImpl implements StudentDAO{
     }
 
     @Override
-    public void delete(String s) {
+    public void delete(String delete) {
 
     }
 }

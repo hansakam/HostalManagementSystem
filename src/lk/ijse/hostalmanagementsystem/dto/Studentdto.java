@@ -4,14 +4,23 @@
  */
 package lk.ijse.hostalmanagementsystem.dto;
 
+import lk.ijse.hostalmanagementsystem.entity.StudentEntity;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+import java.util.Date;
+
+@AllArgsConstructor
+@NoArgsConstructor
 @Data
-public class Student{
+public class Studentdto {
     private String sid;
     private String name;
     private String address;
     private String contact;
-    private int dob;
+    private LocalDate dob;
     private String gender;
+
 }

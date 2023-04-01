@@ -4,9 +4,7 @@
  */
 package lk.ijse.hostalmanagementsystem.dao;
 
-import lk.ijse.hostalmanagementsystem.dto.Student;
 import lk.ijse.hostalmanagementsystem.entity.StudentEntity;
 
 public interface StudentDAO extends CrudDAO<StudentEntity,String>{
-
 }
