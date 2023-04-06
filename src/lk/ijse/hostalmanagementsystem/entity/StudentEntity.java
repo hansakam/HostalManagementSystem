@@ -29,8 +29,10 @@ public class StudentEntity {
 
 
 
-   /* @OneToMany(mappedBy = "studententity",cascade = CascadeType.ALL)
+   /* @OneToMany(mappedBy = "student",cascade = CascadeType.ALL)
     private List<StudentEntity> studentlist=new ArrayList<>();
 
-*/
+    public StudentEntity(String sid, String name, String address, String contact, LocalDate dob, String gender) {
+
+    }*/
 }

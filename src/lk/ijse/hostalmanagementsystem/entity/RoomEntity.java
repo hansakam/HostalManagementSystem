@@ -25,8 +25,11 @@ public class RoomEntity {
     private String keymoney;
     private int qty;
 
-
 /*
-    @OneToMany
-    private List<ReservationEntity>resarvationlist=new ArrayList<>();*/
+    @OneToMany(mappedBy = "roomEntity",cascade = CascadeType.ALL)
+    private List<ReservationEntity>resarvationlist=new ArrayList<>();
+
+    public RoomEntity(String rid, String type, String keymoney, int qty) {
+
+    }*/
 }

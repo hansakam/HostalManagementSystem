@@ -33,11 +33,11 @@
       </TextField>
       <Label layoutX="431.0" layoutY="37.0" styleClass="sudentheadLabel" stylesheets="@style/styleSheet.css" text="Students" />
       <JFXComboBox fx:id="Combogender" layoutX="608.0" layoutY="322.0" prefHeight="25.0" prefWidth="243.0" promptText="Gender" />
-      <JFXButton fx:id="addId" layoutX="556.0" layoutY="478.0" onAction="#addOnAction" text="Add" />
-      <JFXButton fx:id="deleteid" layoutX="363.0" layoutY="478.0" onAction="#deleteOnAction" text="Delete" />
-      <JFXButton fx:id="update" layoutX="253.0" layoutY="478.0" onAction="#updateOnAction" text="Update" />
+      <JFXButton fx:id="addId" layoutX="756.0" layoutY="445.0" onAction="#addOnAction" prefHeight="43.0" prefWidth="95.0" style="-fx-background-radius: 20;" styleClass="studentsbuttons" stylesheets="@style/styleSheet.css" text="Add" />
+      <JFXButton fx:id="deleteid" layoutX="546.0" layoutY="445.0" onAction="#deleteOnAction" prefHeight="43.0" prefWidth="95.0" style="-fx-background-radius: 20;" styleClass="studentsbuttons" stylesheets="@style/styleSheet.css" text="Delete" />
+      <JFXButton fx:id="update" layoutX="336.0" layoutY="445.0" onAction="#updateOnAction" prefHeight="43.0" prefWidth="95.0" style="-fx-background-radius: 20;" styleClass="studentsbuttons" stylesheets="@style/styleSheet.css" text="Update" />
       <JFXDatePicker fx:id="combodatepic" layoutX="171.0" layoutY="322.0" prefHeight="25.0" prefWidth="225.0" promptText="Date Of Birth" />
-      <JFXButton layoutX="119.0" layoutY="466.0" onAction="#searchOnAction" text="Search" />
+      <JFXButton layoutX="112.0" layoutY="445.0" onAction="#searchOnAction" prefHeight="43.0" prefWidth="95.0" style="-fx-background-radius: 20;" styleClass="studentsbuttons" stylesheets="@style/styleSheet.css" text="Search" />
    </children>
    <stylesheets>
       <URL value="@style/styleSheet.css" />

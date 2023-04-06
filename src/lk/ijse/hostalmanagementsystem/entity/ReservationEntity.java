@@ -28,14 +28,13 @@ public class ReservationEntity {
     private String roomtypeid;
     private String status;
 
-  /*  @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name ="sid",referencedColumnName = "sid")
-    private ReservationEntity studententity;
+    private StudentEntity student;
 
 
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "res_id",referencedColumnName = "res_id")
+    @JoinColumn(name = "rid",referencedColumnName = "room_type_Id")
     private RoomEntity roomEntity;
-*/
 }

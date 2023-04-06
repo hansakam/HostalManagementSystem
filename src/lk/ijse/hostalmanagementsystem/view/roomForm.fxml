@@ -25,10 +25,10 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </TextField>
-      <JFXButton fx:id="Savebtn" layoutX="695.0" layoutY="476.0" onAction="#SaveOnAction" text="Add" />
-      <JFXButton fx:id="SearchBtn" layoutX="548.0" layoutY="476.0" onAction="#SearchOnAction" text="Search" />
-      <JFXButton fx:id="updateBtn" layoutX="431.0" layoutY="476.0" onAction="#updateOnAction" text="Update" />
-      <JFXButton fx:id="deleteBtn" layoutX="264.0" layoutY="476.0" onAction="#DeleteOnAction" text="Delete" />
+      <JFXButton fx:id="Savebtn" layoutX="707.0" layoutY="415.0" onAction="#SaveOnAction" prefHeight="43.0" prefWidth="95.0" style="-fx-background-radius: 20;" styleClass="roombuttons" stylesheets="@style/styleSheet.css" text="Add" />
+      <JFXButton fx:id="SearchBtn" layoutX="436.0" layoutY="415.0" onAction="#SearchOnAction" prefHeight="43.0" prefWidth="95.0" style="-fx-background-radius: 20;" styleClass="roombuttons" stylesheets="@style/styleSheet.css" text="Search" />
+      <JFXButton fx:id="updateBtn" layoutX="573.0" layoutY="415.0" onAction="#updateOnAction" prefHeight="43.0" prefWidth="95.0" style="-fx-background-radius: 20;" styleClass="roombuttons" stylesheets="@style/styleSheet.css" text="Update" />
+      <JFXButton fx:id="deleteBtn" layoutX="276.0" layoutY="415.0" onAction="#DeleteOnAction" prefHeight="43.0" prefWidth="95.0" style="-fx-background-radius: 20;" styleClass="roombuttons" stylesheets="@style/styleSheet.css" text="Delete" />
       <JFXComboBox fx:id="roomtypeCombo" layoutX="610.0" layoutY="211.0" prefHeight="25.0" prefWidth="246.0" promptText="Room Type" />
    </children>
 </AnchorPane>

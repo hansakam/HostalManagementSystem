@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
-
 
 <AnchorPane prefHeight="669.0" prefWidth="1112.0" styleClass="Paymentformbgcolour" stylesheets="@style/styleSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostalmanagementsystem.controller.PaymentFormController">
    <children>
       <Label layoutX="494.0" layoutY="117.0" styleClass="PaymentheadLabel" stylesheets="@style/styleSheet.css" text="Payment" />
+      <TableView fx:id="tblpaymentDetails" layoutX="167.0" layoutY="263.0" prefHeight="144.0" prefWidth="734.0">
+        <columns>
+          <TableColumn fx:id="tblcreservationid" prefWidth="101.0" text="ReservationID" />
+          <TableColumn fx:id="tblstudentid" prefWidth="106.0" text="StudentID" />
+            <TableColumn fx:id="tblcstudentname" prefWidth="106.0" text="StudentName" />
+            <TableColumn fx:id="tblcromtypeid" prefWidth="106.0" text="RoomTypeID" />
+            <TableColumn fx:id="tblroomtype" prefWidth="106.0" text="RoomType" />
+            <TableColumn fx:id="tblcpaymentid" prefWidth="106.0" text="PaymentId" />
+            <TableColumn fx:id="tblcstatus" prefWidth="102.0" text="Status" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>
