@@ -9,12 +9,14 @@ import lk.ijse.hostalmanagementsystem.entity.StudentEntity;
 import lk.ijse.hostalmanagementsystem.utill.FactoryConfiguration;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
+
+import java.util.List;
 
 public class StudentDAOImpl implements StudentDAO {
     @Override
     public void save(StudentEntity entity) {
-
-        Session session = new FactoryConfiguration().getinstance().getsession();
+        Session session = FactoryConfiguration.getinstance().getsession();
         Transaction transaction = session.beginTransaction();
         session.save(entity);
         transaction.commit();
@@ -23,7 +25,7 @@ public class StudentDAOImpl implements StudentDAO {
 
     @Override
     public void update(StudentEntity entity) {
-        Session session = new FactoryConfiguration().getinstance().getsession();
+        Session session = FactoryConfiguration.getinstance().getsession();
         Transaction transaction = session.beginTransaction();
         session.update(entity);
         transaction.commit();
@@ -33,7 +35,7 @@ public class StudentDAOImpl implements StudentDAO {
 
     @Override
     public StudentEntity search(String id) {
-        Session session = new FactoryConfiguration().getinstance().getsession();
+        Session session = FactoryConfiguration.getinstance().getsession();
         Transaction transaction = session.beginTransaction();
        StudentEntity entity= session.get(StudentEntity.class,id);
         System.out.println();
@@ -44,12 +46,22 @@ public class StudentDAOImpl implements StudentDAO {
 
     @Override
     public void delete(String id) {
-        Session session = new FactoryConfiguration().getinstance().getsession();
+        Session session = FactoryConfiguration.getinstance().getsession();
         Transaction transaction = session.beginTransaction();
         StudentEntity entity = session.get(StudentEntity.class, id);
         session.delete(entity);
         transaction.commit();
         session.close();
 
+    }
+
+    @Override
+    public List<StudentEntity> getAll() {
+        Session session = FactoryConfiguration.getinstance().getsession();
+        String hql="From StudentEntity";
+        Query query = session.createQuery(hql);
+        List list = query.list();
+        session.close();
+        return list;
     }
 }

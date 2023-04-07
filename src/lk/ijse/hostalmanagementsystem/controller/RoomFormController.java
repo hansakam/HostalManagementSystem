@@ -10,6 +10,8 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import lk.ijse.hostalmanagementsystem.bo.BOFactory;
 import lk.ijse.hostalmanagementsystem.bo.custom.RoomBO;
@@ -27,8 +29,13 @@ public class RoomFormController implements Initializable {
     public TextField Txtqty;
     public TextField Txtkeymoney;
     public TextField Txtrtid;
+    public TableView tblroom;
+    public TableColumn tblcolrid;
+    public TableColumn tblcolroomtype;
+    public TableColumn tblcolkeymoney;
+    public TableColumn tblcolqty;
 
-           /*create a BOFactory mathod*/
+    /*create a BOFactory mathod*/
 
     RoomBO roomBO = (RoomBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.ROOM);
 

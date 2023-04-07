@@ -15,6 +15,6 @@
       <Label fx:id="residLbl11" layoutX="642.0" layoutY="209.0" prefHeight="37.0" prefWidth="73.0" styleClass="resdate" stylesheets="@style/styleSheet.css" text="Date  :" />
       <JFXComboBox fx:id="combostudentid" layoutX="211.0" layoutY="339.0" prefHeight="30.0" prefWidth="244.0" promptText="Student Id" />
       <JFXComboBox fx:id="comboroomtype" layoutX="626.0" layoutY="339.0" prefHeight="30.0" prefWidth="244.0" promptText="Room Type Id" />
-      <JFXButton layoutX="531.0" layoutY="573.0" onAction="#BTNsaveOnAction" text="Save" />
+      <JFXButton layoutX="523.0" layoutY="517.0" onAction="#BTNsaveOnAction" prefHeight="43.0" prefWidth="95.0" style="-fx-background-radius: 20;" styleClass="resevationbuttons" stylesheets="@style/styleSheet.css" text="Save" />
    </children>
 </AnchorPane>

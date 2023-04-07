@@ -5,6 +5,8 @@
 <?import com.jfoenix.controls.JFXDatePicker?>
 <?import java.net.URL?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
@@ -38,6 +40,16 @@
       <JFXButton fx:id="update" layoutX="336.0" layoutY="445.0" onAction="#updateOnAction" prefHeight="43.0" prefWidth="95.0" style="-fx-background-radius: 20;" styleClass="studentsbuttons" stylesheets="@style/styleSheet.css" text="Update" />
       <JFXDatePicker fx:id="combodatepic" layoutX="171.0" layoutY="322.0" prefHeight="25.0" prefWidth="225.0" promptText="Date Of Birth" />
       <JFXButton layoutX="112.0" layoutY="445.0" onAction="#searchOnAction" prefHeight="43.0" prefWidth="95.0" style="-fx-background-radius: 20;" styleClass="studentsbuttons" stylesheets="@style/styleSheet.css" text="Search" />
+      <TableView fx:id="tblstudenttable" layoutX="183.0" layoutY="522.0" prefHeight="121.0" prefWidth="709.0">
+        <columns>
+          <TableColumn fx:id="tblcolsid" prefWidth="75.0" text="sid" />
+          <TableColumn fx:id="tblcolname" prefWidth="96.0" text="name" />
+            <TableColumn fx:id="tblcoladdress" prefWidth="97.0" text="address" />
+            <TableColumn fx:id="tblcolcontact" prefWidth="165.0" text="contact" />
+            <TableColumn fx:id="tblcoldob" prefWidth="156.0" text="dob" />
+            <TableColumn fx:id="tblcolgender" prefWidth="119.0" text="gender" />
+        </columns>
+      </TableView>
    </children>
    <stylesheets>
       <URL value="@style/styleSheet.css" />

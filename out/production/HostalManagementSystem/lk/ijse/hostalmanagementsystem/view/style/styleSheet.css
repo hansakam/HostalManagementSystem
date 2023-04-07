@@ -48,6 +48,12 @@
 .roomformbgcolour{
     -fx-background-color:#BDBDBD;
 }
+.roombuttons{
+    -fx-background-color:linear-gradient(to right top, #283593, #1565C0, #0288D1, #26C6DA, #4FC3F7);
+    -fx-font-size:16;
+    -fx-font-weight:bold;
+    -fx-text-fill: white;
+}
 
 
             /*Dashboard*/
@@ -84,10 +90,15 @@
 }
 
 .sudentformbgcolour{
-    -fx-background-color:#BDBDBD;
+    -fx-background-color:#ECEFF1;
 }
 
-
+.studentsbuttons{
+    -fx-background-color:linear-gradient(to right top, #283593, #1565C0, #0288D1, #26C6DA, #4FC3F7);
+    -fx-font-size:16;
+    -fx-font-weight:bold;
+    -fx-text-fill: white;
+}
 
 
         /*reservation*/
@@ -110,6 +121,20 @@
     -fx-font-size: 13;
     -fx-font-weight:bold;
 }
+
+.resevationbuttons{
+    -fx-background-color:linear-gradient(to right top, #283593, #1565C0, #0288D1, #26C6DA, #4FC3F7);
+    -fx-font-size:16;
+    -fx-font-weight:bold;
+    -fx-text-fill: white;
+}
+
+
+
+
+
+
+
 
 
     /*Payment*/
