@@ -2,19 +2,29 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane prefHeight="669.0" prefWidth="1112.0" styleClass="reservationformbgcolour" stylesheets="@style/styleSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostalmanagementsystem.controller.ReservationFormController">
    <children>
       <Label layoutX="479.0" layoutY="101.0" styleClass="reservationheadLabel" stylesheets="@style/styleSheet.css" text="Resevation" />
-      <JFXComboBox fx:id="combostatus" layoutX="211.0" layoutY="434.0" prefHeight="30.0" prefWidth="244.0" promptText="Status" />
       <Label fx:id="lblresid" layoutX="264.0" layoutY="219.0" prefHeight="37.0" prefWidth="184.0" />
-      <Label layoutX="204.0" layoutY="219.0" prefHeight="37.0" prefWidth="45.0" styleClass="resid" stylesheets="@style/styleSheet.css" text="Res Id :" />
       <Label fx:id="lbldate" layoutX="679.0" layoutY="209.0" prefHeight="37.0" prefWidth="184.0" />
-      <Label fx:id="residLbl11" layoutX="642.0" layoutY="209.0" prefHeight="37.0" prefWidth="73.0" styleClass="resdate" stylesheets="@style/styleSheet.css" text="Date  :" />
-      <JFXComboBox fx:id="combostudentid" layoutX="211.0" layoutY="339.0" prefHeight="30.0" prefWidth="244.0" promptText="Student Id" />
-      <JFXComboBox fx:id="comboroomtype" layoutX="626.0" layoutY="339.0" prefHeight="30.0" prefWidth="244.0" promptText="Room Type Id" />
-      <JFXButton layoutX="523.0" layoutY="517.0" onAction="#BTNsaveOnAction" prefHeight="43.0" prefWidth="95.0" style="-fx-background-radius: 20;" styleClass="resevationbuttons" stylesheets="@style/styleSheet.css" text="Save" />
+      <JFXComboBox fx:id="cmbStudentId" layoutX="72.0" layoutY="157.0" prefHeight="30.0" prefWidth="197.0" promptText="Student Id" />
+      <JFXButton fx:id="btnReserve" layoutX="782.0" layoutY="593.0" onAction="#BTNsaveOnAction" prefHeight="45.0" prefWidth="197.0" style="-fx-background-radius: 20;" styleClass="resevationbuttons" stylesheets="@style/styleSheet.css" text="Save Reservation" />
+      <JFXTextField fx:id="txtStudentName" layoutX="425.0" layoutY="166.0" prefHeight="25.0" prefWidth="216.0" promptText="Student Name" />
+      <JFXTextField fx:id="txtContactNo" layoutX="782.0" layoutY="164.0" prefHeight="25.0" prefWidth="230.0" promptText="Contact" />
+      <JFXTextField fx:id="txtAddress" layoutX="72.0" layoutY="262.0" prefHeight="25.0" prefWidth="197.0" promptText="Address" />
+      <JFXTextField fx:id="txtDOB" layoutX="425.0" layoutY="264.0" prefHeight="25.0" prefWidth="216.0" promptText="Date Of Birth" />
+      <JFXTextField fx:id="txtGender" layoutX="782.0" layoutY="264.0" prefHeight="25.0" prefWidth="230.0" promptText="Gender" />
+      <JFXComboBox fx:id="cmbRoomId" layoutX="72.0" layoutY="385.0" prefHeight="30.0" prefWidth="197.0" promptText="Room Id" />
+      <JFXTextField fx:id="txtRoomType" layoutX="425.0" layoutY="394.0" prefHeight="25.0" prefWidth="216.0" promptText="Room Type" />
+      <JFXTextField fx:id="txtKeyMoney" layoutX="782.0" layoutY="392.0" prefHeight="25.0" prefWidth="230.0" promptText="Key Money" />
+      <JFXTextField fx:id="txtQty" layoutX="72.0" layoutY="490.0" prefHeight="25.0" prefWidth="197.0" promptText="QTY" />
+      <JFXTextField fx:id="txtMonthlyRent" layoutX="425.0" layoutY="492.0" prefHeight="25.0" prefWidth="216.0" promptText="Advanced" />
+      <Separator layoutX="14.0" layoutY="342.0" prefHeight="10.0" prefWidth="1092.0" style="-fx-border-color: red; -fx-background-color: red;" />
+      <Label fx:id="llbResId" layoutX="44.0" layoutY="107.0" prefHeight="37.0" prefWidth="216.0" />
    </children>
 </AnchorPane>

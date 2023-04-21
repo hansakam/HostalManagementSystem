@@ -4,13 +4,15 @@
  */
 package lk.ijse.hostalmanagementsystem.dao;
 
+import java.sql.SQLException;
+
 public interface CrudDAO <T,Id>extends SuperDAO{
-    void save(T dto);
+    boolean save(T dto);
 
-    void update(T dto);
+    boolean update(T dto);
 
-    T search(Id id);
+    T search(Id id) throws SQLException, ClassNotFoundException;
 
-    void delete (Id id);
+    boolean delete (Id id);
 
 }

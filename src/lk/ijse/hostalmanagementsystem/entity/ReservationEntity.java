@@ -7,6 +7,7 @@ package lk.ijse.hostalmanagementsystem.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -17,24 +18,23 @@ import java.util.List;
 @NoArgsConstructor
 @Data
 @Entity
+@Cacheable
+@org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class ReservationEntity {
     @Id
-    @Column(name ="res_id")
     private String resid;
     private LocalDate date;
-    @Column(name ="student_id")
-    private String sid;
-    @Column(name ="room_type_id")
-    private String roomtypeid;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "student_Id", referencedColumnName = "sid")
+    private StudentEntity sid;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "room_type_id", referencedColumnName = "rid")
+    private RoomEntity roomtypeid;
+
     private String status;
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name ="sid",referencedColumnName = "sid")
-    private StudentEntity student;
-
-
-
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "rid",referencedColumnName = "room_type_Id")
-    private RoomEntity roomEntity;
+    private String Key_Money;
+    private double advanse;
 }

@@ -6,6 +6,7 @@ package lk.ijse.hostalmanagementsystem.controller;
 
 
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
@@ -23,6 +24,8 @@ public class LoginFormController implements Initializable {
 
     public JFXButton logid;
     public AnchorPane pane;
+    public JFXTextField userid;
+    public JFXTextField passwordId;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

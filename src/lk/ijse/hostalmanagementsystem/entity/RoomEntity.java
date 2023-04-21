@@ -18,18 +18,19 @@ import java.util.List;
 @Entity
 public class RoomEntity {
     @Id
-    @Column(name = "room_type_Id")
     private String rid;
+    @Column
     private String type;
-    @Column(name = "key_money")
     private String keymoney;
     private int qty;
 
-/*
-    @OneToMany(mappedBy = "roomEntity",cascade = CascadeType.ALL)
-    private List<ReservationEntity>resarvationlist=new ArrayList<>();
+    @OneToMany(mappedBy = "roomtypeid", fetch = FetchType.EAGER)
+    private List<ReservationEntity> roomDetails = new ArrayList<>();
 
-    public RoomEntity(String rid, String type, String keymoney, int qty) {
-
-    }*/
+    public RoomEntity(String room_type_id, String type, String key_money, int qty) {
+        this.rid = room_type_id;
+        this.type = type;
+        this.keymoney = key_money;
+        this.qty = qty;
+    }
 }

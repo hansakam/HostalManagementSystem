@@ -11,26 +11,30 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class StudentDAOImpl implements StudentDAO {
     @Override
-    public void save(StudentEntity entity) {
+    public boolean save(StudentEntity entity) {
         Session session = FactoryConfiguration.getinstance().getsession();
         Transaction transaction = session.beginTransaction();
         session.save(entity);
         transaction.commit();
         session.close();
+        return true;
     }
 
     @Override
-    public void update(StudentEntity entity) {
+    public boolean update(StudentEntity entity) {
         Session session = FactoryConfiguration.getinstance().getsession();
         Transaction transaction = session.beginTransaction();
         session.update(entity);
         transaction.commit();
         session.close();
 
+        return true;
     }
 
     @Override
@@ -45,7 +49,7 @@ public class StudentDAOImpl implements StudentDAO {
     }
 
     @Override
-    public void delete(String id) {
+    public boolean delete(String id) {
         Session session = FactoryConfiguration.getinstance().getsession();
         Transaction transaction = session.beginTransaction();
         StudentEntity entity = session.get(StudentEntity.class, id);
@@ -53,15 +57,32 @@ public class StudentDAOImpl implements StudentDAO {
         transaction.commit();
         session.close();
 
+        return true;
     }
 
     @Override
-    public List<StudentEntity> getAll() {
+    public ArrayList<StudentEntity> getAll() {
+        ArrayList<StudentEntity> allStudents;
         Session session = FactoryConfiguration.getinstance().getsession();
-        String hql="From StudentEntity";
-        Query query = session.createQuery(hql);
-        List list = query.list();
+        Transaction transaction = session.beginTransaction();
+        Query query = session.createQuery("FROM StudentEntity ");
+        allStudents = (ArrayList<StudentEntity>) query.list();
+        transaction.commit();
         session.close();
-        return list;
+        return allStudents;
+    }
+
+    public boolean exist(String id) throws SQLException, ClassNotFoundException {
+
+        Session session = FactoryConfiguration.getinstance().getsession();
+        Transaction transaction = session.beginTransaction();
+        Query query = session.createQuery("SELECT sid FROM StudentEntity WHERE sid=:id");
+        String id1 = (String) query.setParameter("id", id).uniqueResult();
+        if (id1 != null) {
+            return true;
+        }
+        transaction.commit();
+        session.close();
+        return false;
     }
 }

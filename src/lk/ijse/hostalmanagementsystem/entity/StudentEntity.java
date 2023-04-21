@@ -21,18 +21,22 @@ import java.util.List;
 public class StudentEntity {
     @Id
     private String sid;
+    @Column
     private String name;
     private String address;
     private String contact;
     private LocalDate dob;
     private String gender;
 
+    @OneToMany(mappedBy = "sid", fetch = FetchType.EAGER)
+    private List<ReservationEntity> studentList = new ArrayList<>();
 
-
-   /* @OneToMany(mappedBy = "student",cascade = CascadeType.ALL)
-    private List<StudentEntity> studentlist=new ArrayList<>();
-
-    public StudentEntity(String sid, String name, String address, String contact, LocalDate dob, String gender) {
-
-    }*/
+    public StudentEntity(String student_id, String name, String address, String contact_no, LocalDate dob, String gender) {
+        this.sid = student_id;
+        this.name = name;
+        this.address = address;
+        this.contact = contact_no;
+        this.dob = dob;
+        this.gender = gender;
+    }
 }

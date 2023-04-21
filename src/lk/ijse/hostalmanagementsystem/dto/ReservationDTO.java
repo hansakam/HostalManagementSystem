@@ -4,6 +4,8 @@
  */
 package lk.ijse.hostalmanagementsystem.dto;
 
+import lk.ijse.hostalmanagementsystem.entity.RoomEntity;
+import lk.ijse.hostalmanagementsystem.entity.StudentEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,11 +15,15 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @Data
 public class ReservationDTO {
-    private String resid;
+    private String res_id;
     private LocalDate date;
     private String sid;
-    private String roomtypeid;
+    private String room_typeid;
     private String status;
+    private String Key_Money;
+    private double advansed;
+
+
 
 }
 

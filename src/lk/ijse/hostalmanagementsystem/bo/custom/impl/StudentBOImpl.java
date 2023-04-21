@@ -13,6 +13,7 @@ import lk.ijse.hostalmanagementsystem.dto.StudentDTO;
 import lk.ijse.hostalmanagementsystem.entity.StudentEntity;
 import lk.ijse.hostalmanagementsystem.tm.StudentTM;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public class StudentBOImpl implements StudentBO {
@@ -33,7 +34,7 @@ public class StudentBOImpl implements StudentBO {
     }
 
     @Override
-    public StudentDTO searchStudent(String id) {
+    public StudentDTO searchStudent(String id) throws SQLException, ClassNotFoundException {
         StudentEntity  entity=studentDAO.search(id);
         return new StudentDTO(
        entity.getSid(),entity.getName(),entity.getAddress(),entity.getContact(),entity.getDob(),entity.getGender());
