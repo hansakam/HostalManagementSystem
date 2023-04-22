@@ -39,16 +39,6 @@ public class ResevationDAOImpl implements ReservationDAO {
         return true;
     }
 
-   /* @Override
-    public ReservationEntity search(String id) {
-        Session session = FactoryConfiguration.getinstance().getsession();
-        Transaction transaction = session.beginTransaction();
-        ReservationEntity reservation = session.get(ReservationEntity.class, id);
-        transaction.commit();
-        session.close();
-        return reservation;
-    }
-*/
     @Override
     public ReservationEntity search(String id) {
         Session session = FactoryConfiguration.getinstance().getsession();
@@ -81,20 +71,9 @@ public class ResevationDAOImpl implements ReservationDAO {
         return list.size()>0? String.format("#R%03d",Integer.parseInt(list.get(0).replace("#R",""))+1):"#R001";
     }
 
-   /* public ReservationEntity search(String id) throws SQLException, ClassNotFoundException {
-
-        Session session = FactoryConfiguration.getinstance().getsession();
-        Transaction transaction = session.beginTransaction();
-        ReservationEntity reservation = session.get(ReservationEntity.class, id);
-        transaction.commit();
-        session.close();
-        return reservation;
-    }*/
-
-
     public List<ReservationEntity> getAll() throws SQLException, ClassNotFoundException {
 
-        /*ArrayList<ReservationEntity> allReserve = null;*/
+
         Session session = FactoryConfiguration.getinstance().getsession();
        // Transaction transaction = session.beginTransaction();
         Query query = session.createQuery("From ReservationEntity ");
@@ -116,13 +95,5 @@ public class ResevationDAOImpl implements ReservationDAO {
         session.close();
         return false;
     }
-   /* public ReservationEntity search(String id) throws SQLException, ClassNotFoundException {
 
-        Session session = FactoryConfiguration.getinstance().getsession();
-        Transaction transaction = session.beginTransaction();
-        ReservationEntity reservation = session.get(ReservationEntity.class, id);
-        transaction.commit();
-        session.close();
-        return reservation;
-    }*/
 }

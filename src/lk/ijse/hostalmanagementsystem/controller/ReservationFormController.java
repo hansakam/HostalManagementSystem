@@ -56,7 +56,7 @@ public class ReservationFormController implements Initializable {
     /*Create a BOFactory mathod*/
 
 
-    ReservationBO reservationBO = (ReservationBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.RESERVATION);
+    private final ReservationBO reservationBO = (ReservationBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.RESERVATION);
 
 
     public void BTNsaveOnAction(ActionEvent actionEvent) {
@@ -67,10 +67,10 @@ public class ReservationFormController implements Initializable {
 
         boolean b = saveReserve(RegID, LocalDate.now(),cmbStudentId.getValue(), cmbRoomId.getValue(),status, txtMonthlyRent.getText(), advance);
         if (b) {
-           // NotificationController.SuccessfulTableNotification("Room Reserve", "Room Reserved in student ");
+
         } else {
             System.out.println(b);
-            //NotificationController.UnSuccessfulTableNotification("Room Reserve", "Room Reserved in student ");
+
         }
 
         RegID = generateNewOrderId();
@@ -94,7 +94,7 @@ public class ReservationFormController implements Initializable {
         try {
             return reservationBO.generateNewReserveID();
         } catch (SQLException e) {
-           /* NotificationController.Warring("Generate Order Id", "Failed to generate a new order id...");*/
+
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -131,7 +131,7 @@ public class ReservationFormController implements Initializable {
             }
 
         } catch (SQLException e) {
-            //NotificationController.Warring("Student Load", "Failed to load customer ids.");
+
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -169,9 +169,9 @@ public class ReservationFormController implements Initializable {
             if (newValue != null) {
                 try {
                     if (!exitStudent(newValue + "")) {
-                       // NotificationController.WarringError("Search Student Warning", newValue, "There is no such student associated with the ");
+
                     }
-                    /*Search student*/
+                         /*Search student*/
                     StudentDTO studentDTO = reservationBO.searchStudent(newValue + "");
                     txtStudentName.setText(studentDTO.getName());
                     txtAddress.setText(studentDTO.getAddress());
@@ -180,7 +180,7 @@ public class ReservationFormController implements Initializable {
                     txtContactNo.setText(studentDTO.getContact());
 
                 } catch (SQLException | ClassNotFoundException e) {
-                    //NotificationController.WarringError("Search Student Warning", newValue, "Failed to find the Student ");
+
                 }
             } else {
                 txtStudentName.clear();

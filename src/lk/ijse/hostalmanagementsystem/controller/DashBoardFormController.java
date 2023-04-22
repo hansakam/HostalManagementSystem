@@ -45,7 +45,7 @@ public class DashBoardFormController implements Initializable {
     }
 
     public void logoutOnAction(ActionEvent actionEvent) throws IOException {
-       //Navigation.navigate(Route.LOGINFORM,pane);
+       Navigation.navigate(Route.LOGINFORM,mainpane);
     }
 
     public void roomOnAction(ActionEvent actionEvent) throws IOException {

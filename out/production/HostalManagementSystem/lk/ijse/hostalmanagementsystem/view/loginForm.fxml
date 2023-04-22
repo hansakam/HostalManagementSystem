@@ -21,9 +21,11 @@
                   </Label>
                </children>
             </Pane>
-            <JFXButton fx:id="logid" layoutX="105.0" layoutY="333.0" onAction="#loginOnAction" prefHeight="67.0" prefWidth="200.0" style="-fx-background-radius: 20;" styleClass="logbutton" stylesheets="@style/styleSheet.css" text="logIn" />
-            <JFXTextField fx:id="userid" layoutX="86.0" layoutY="141.0" onAction="#userOnAction" prefHeight="25.0" prefWidth="240.0" />
-            <JFXTextField fx:id="passwordId" layoutX="86.0" layoutY="216.0" onAction="#paswordOnAction" prefHeight="25.0" prefWidth="240.0" />
+            <JFXButton fx:id="logid" layoutX="93.0" layoutY="269.0" onAction="#loginOnAction" prefHeight="45.0" prefWidth="186.0" style="-fx-background-radius: 20;" styleClass="logbutton" stylesheets="@style/styleSheet.css" text="logIn" />
+            <JFXTextField fx:id="userid" layoutX="86.0" layoutY="141.0" prefHeight="25.0" prefWidth="240.0" promptText="USER NAME" />
+            <JFXTextField fx:id="passwordId" layoutX="86.0" layoutY="216.0" prefHeight="25.0" prefWidth="240.0" promptText="PASSWORD" />
+            <JFXButton fx:id="btnresetaccount" layoutX="60.0" layoutY="360.0" onAction="#btnresetaccountonAction" text="Reset Account" />
+            <JFXButton fx:id="btncreateaccount" layoutX="249.0" layoutY="360.0" onAction="#btncreateaccountOnAction" text="Create Account" />
          </children>
       </Pane>
    </children>

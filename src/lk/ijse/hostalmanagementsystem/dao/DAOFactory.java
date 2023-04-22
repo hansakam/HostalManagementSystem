@@ -19,7 +19,7 @@ public class DAOFactory {
         return daoFactory;
     }
     public enum DAOTypes{
-        STUDENT,ROOM,RESERVATION,PAYMENT,USER
+        STUDENT,ROOM,RESERVATION,PAYMENT,USER,LOGIN
     }
     public SuperDAO getDAO(DAOTypes types){
         switch (types){
@@ -33,6 +33,7 @@ public class DAOFactory {
                 return new PaymentDAOImpl();
             case USER:
                 return new UserDAOImpl();
+
             default:
                 return null;
         }

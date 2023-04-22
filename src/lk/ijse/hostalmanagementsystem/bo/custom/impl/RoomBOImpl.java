@@ -11,9 +11,7 @@ import lk.ijse.hostalmanagementsystem.dao.DAOFactory;
 import lk.ijse.hostalmanagementsystem.dao.custom.RoomDAO;
 import lk.ijse.hostalmanagementsystem.dto.RoomDTO;
 import lk.ijse.hostalmanagementsystem.entity.RoomEntity;
-import lk.ijse.hostalmanagementsystem.entity.StudentEntity;
 import lk.ijse.hostalmanagementsystem.tm.RoomTM;
-import lk.ijse.hostalmanagementsystem.tm.StudentTM;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -25,14 +23,16 @@ public class RoomBOImpl implements RoomBO {
     RoomDAO roomDAO = (RoomDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOTypes.ROOM);
 
     @Override
-    public void saveRoom(RoomDTO dto) {
+    public boolean saveRoom(RoomDTO dto) {
        roomDAO.save(new RoomEntity(dto.getRid(),dto.getType(),dto.getKeymoney(),dto.getQty()));
+        return false;
     }
 
     @Override
-    public void updateRoom(RoomDTO dto) {
+    public boolean updateRoom(RoomDTO dto) {
         roomDAO.update(new RoomEntity(dto.getRid(),dto.getType(),dto.getKeymoney(),dto.getQty()));
 
+        return false;
     }
 
     @Override
@@ -43,9 +43,10 @@ public class RoomBOImpl implements RoomBO {
     }
 
     @Override
-    public void deleteRoom(String id) {
+    public boolean deleteRoom(String id) {
         roomDAO.delete(id);
 
+        return false;
     }
 
     @Override

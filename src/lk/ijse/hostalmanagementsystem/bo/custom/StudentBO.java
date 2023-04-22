@@ -8,10 +8,10 @@ import lk.ijse.hostalmanagementsystem.tm.StudentTM;
 import java.sql.SQLException;
 
 public interface StudentBO extends SuperBO {
-    void saveStudent(StudentDTO dto);
-    void updateStudent(StudentDTO dto);
+    boolean saveStudent(StudentDTO dto);
+    boolean updateStudent(StudentDTO dto);
     StudentDTO searchStudent(String id) throws SQLException, ClassNotFoundException;
-    void deleteStudent(String id);
+    boolean deleteStudent(String id);
     ObservableList<StudentTM> getAllStudent();
 
 

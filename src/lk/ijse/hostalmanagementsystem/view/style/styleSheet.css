@@ -132,11 +132,6 @@
 
 
 
-
-
-
-
-
     /*Payment*/
 
 .PaymentheadLabel{
@@ -151,4 +146,32 @@
 
 
 
+                  /*  user form  */
 
+.Userbuttons{
+    -fx-background-color:linear-gradient(to right top, #283593, #1565C0, #0288D1, #26C6DA, #4FC3F7);
+    -fx-font-size:16;
+    -fx-font-weight:bold;
+    -fx-text-fill: white;
+}
+.userheadLabel{
+    -fx-text-fill:#00B0FF;
+    -fx-font-weight:bold;
+    -fx-font-size: 40;
+}
+
+
+
+                /*   forgotpassword  */
+
+.forgotbuttons{
+    -fx-background-color:linear-gradient(to right top, #283593, #1565C0, #0288D1, #26C6DA, #4FC3F7);
+    -fx-font-size:16;
+    -fx-font-weight:bold;
+    -fx-text-fill: white;
+}
+.forgotheadLabel{
+    -fx-text-fill:#00B0FF;
+    -fx-font-weight:bold;
+    -fx-font-size: 40;
+}

@@ -40,6 +40,23 @@ public class Navigation {
                 window.setTitle("PAYMENT");
                 initUI("paymentForm.fxml");
                 break;
+            case REGISTER:
+                window.setTitle("REGESTER");
+                initUI("registeruser.fxml");
+                break;
+            case FORGOTPASSWORD:
+                window.setTitle("FORGOTPASSWORD");
+                initUI("forgetpassword.fxml");
+                break;
+            case LOGINFORM:
+                window.setTitle("DASHBOARD");
+                initUI("loginForm.fxml");
+                break;
+            case CREATEREGISTER:
+                 window.setTitle("CREATEREGISTER");
+                initUI("loginForm.fxml");
+                break;
+
         }
 
     }

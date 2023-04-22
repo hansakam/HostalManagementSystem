@@ -42,7 +42,6 @@ public class ReservationBOImpl implements ReservationBO {
 
     public boolean PurchaseRoom(ReservationDTO dto) throws SQLException, ClassNotFoundException {
 
-
         Session session = FactoryConfiguration.getinstance().getsession();
         Transaction transaction = session.beginTransaction();
         StudentEntity student = session.get(StudentEntity.class, dto.getSid());
@@ -98,12 +97,6 @@ public class ReservationBOImpl implements ReservationBO {
         }
         return allRoom;
     }
-
-   /* @Override
-    public ArrayList<ReservationDTO> getAllReserve() throws SQLException, ClassNotFoundException {
-        return null;
-    }*/
-
 
     public ObservableList<PaymentTM> getAllReserve() throws SQLException, ClassNotFoundException {
         List<ReservationEntity> all = reservedao.getAll();

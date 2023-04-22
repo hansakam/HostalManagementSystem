@@ -19,7 +19,7 @@ public class UserEntity {
     @Id
     private String userid;
     private String username;
-    private String address;
+    private String password;
     private String email;
 
 }

@@ -10,6 +10,8 @@ import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
+import lk.ijse.hostalmanagementsystem.bo.BOFactory;
+import lk.ijse.hostalmanagementsystem.bo.custom.UserBO;
 import lk.ijse.hostalmanagementsystem.utill.Navigation;
 import lk.ijse.hostalmanagementsystem.utill.Route;
 
@@ -26,6 +28,10 @@ public class LoginFormController implements Initializable {
     public AnchorPane pane;
     public JFXTextField userid;
     public JFXTextField passwordId;
+    public JFXButton btnresetaccount;
+    public JFXButton btncreateaccount;
+
+    UserBO userBO = (UserBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.USER);
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -33,13 +39,21 @@ public class LoginFormController implements Initializable {
     }
 
 
+    public void btnresetaccountonAction(ActionEvent actionEvent) throws IOException {
+        Navigation.navigate(Route.FORGOTPASSWORD,pane);
+    }
+
+    public void btncreateaccountOnAction(ActionEvent actionEvent) throws IOException {
+        Navigation.navigate(Route.REGISTER,pane);
+    }
+
     public void loginOnAction(ActionEvent actionEvent) throws IOException {
-        Navigation.navigate(Route.DASHBOARDFORM,pane);
-    }
 
-    public void userOnAction(ActionEvent actionEvent) {
-    }
 
-    public void paswordOnAction(ActionEvent actionEvent) {
+        if(userBO.checkPassword(userid.getText(),passwordId.getText())){
+
+            Navigation.navigate(Route.DASHBOARDFORM,pane);
+        }
+
     }
 }

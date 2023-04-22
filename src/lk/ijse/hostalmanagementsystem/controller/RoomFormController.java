@@ -22,6 +22,7 @@ import lk.ijse.hostalmanagementsystem.bo.custom.RoomBO;
 import lk.ijse.hostalmanagementsystem.dto.RoomDTO;
 import lk.ijse.hostalmanagementsystem.tm.RoomTM;
 import lk.ijse.hostalmanagementsystem.tm.StudentTM;
+import lk.ijse.hostalmanagementsystem.utill.Notifications;
 import lk.ijse.hostalmanagementsystem.utill.ValidationUtill;
 
 import java.net.URL;
@@ -46,7 +47,7 @@ public class RoomFormController implements Initializable {
     public JFXTextField txtroomtypeid;
     public JFXTextField txtrRoomtype;
 
-    /*create a BOFactory mathod*/
+                    /*create a BOFactory mathod*/
 
     private final RoomBO roomBO = (RoomBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.ROOM);
     private final LinkedHashMap<JFXTextField, Pattern> RegexMap = new LinkedHashMap<>();
@@ -55,8 +56,19 @@ public class RoomFormController implements Initializable {
     public void SaveOnAction(ActionEvent actionEvent) {
 
 
-        roomBO.saveRoom(new RoomDTO(txtroomtypeid.getText(),txtrRoomtype.getText(),Txtkeymoney.getText(),Integer.parseInt(Txtqty.getText())));
+        boolean isAdded=roomBO.saveRoom(new RoomDTO(txtroomtypeid.getText(),txtrRoomtype.getText(),Txtkeymoney.getText(),Integer.parseInt(Txtqty.getText())));
 
+        if(isAdded){
+            String url ="lk/ijse/hostalmanagementsystem/assets/notification.png" ;
+            String titel = "Successful";
+            String text = "Room is Added";
+            Notifications.showNotification(url,text,titel);
+        }else {
+            String url ="lk/ijse/hostalmanagementsystem/assets/sorry.png" ;
+            String titel = "error";
+            String text = "Somthing was wrong";
+            Notifications.showNotification(url,text,titel);
+        }
 
     }
 
@@ -70,13 +82,36 @@ public class RoomFormController implements Initializable {
     }
 
     public void DeleteOnAction(ActionEvent actionEvent) {
-        roomBO.deleteRoom(txtroomtypeid.getText());
+
+        boolean isDelete= roomBO.deleteRoom(txtroomtypeid.getText());
+        if(isDelete){
+            String url ="lk/ijse/hostalmanagementsystem/assets/notification.png" ;
+            String titel = "Successful";
+            String text = "Room is Delete";
+            Notifications.showNotification(url,text,titel);
+        }else {
+            String url ="lk/ijse/hostalmanagementsystem/assets/sorry.png" ;
+            String titel = "error";
+            String text = "Somthing was wrong";
+            Notifications.showNotification(url,text,titel);
+        }
     }
 
     public void updateOnAction(ActionEvent actionEvent) {
 
 
-        roomBO.updateRoom(new RoomDTO(txtroomtypeid.getText(), txtrRoomtype.getText(),Txtkeymoney.getText(),Integer.parseInt(Txtqty.getText())));
+      boolean isUpdate=  roomBO.updateRoom(new RoomDTO(txtroomtypeid.getText(), txtrRoomtype.getText(),Txtkeymoney.getText(),Integer.parseInt(Txtqty.getText())));
+        if(isUpdate){
+            String url ="lk/ijse/hostalmanagementsystem/assets/notification.png" ;
+            String titel = "Successful";
+            String text = "Room is Delete";
+            Notifications.showNotification(url,text,titel);
+        }else {
+            String url ="lk/ijse/hostalmanagementsystem/assets/sorry.png" ;
+            String titel = "error";
+            String text = "Somthing was wrong";
+            Notifications.showNotification(url,text,titel);
+        }
     }
 
 
@@ -86,8 +121,9 @@ public class RoomFormController implements Initializable {
         initUi();
         getarraylist();
 
-      /*  RegexMap.put((JFXTextField) Txtkeymoney,Pattern.compile("^[0-9]+([.]{1}[0-9]{1,2})?+$"));
-        RegexMap.put((JFXTextField) Txtqty,Pattern.compile("^[0-9]+$"));*/
+        RegexMap.put(txtroomtypeid,Pattern.compile("^(RM-)[0-9]{4}$"));
+        RegexMap.put((JFXTextField) Txtkeymoney,Pattern.compile("^[0-9]+([.]{1}[0-9]{1,2})?+$"));
+        RegexMap.put((JFXTextField) Txtqty,Pattern.compile("^[0-9]+$"));
 
     }
     public void FillData(RoomDTO dto){

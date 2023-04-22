@@ -23,14 +23,16 @@ public class StudentBOImpl implements StudentBO {
 
 
     @Override
-    public void saveStudent(StudentDTO dto) {
+    public boolean saveStudent(StudentDTO dto) {
         studentDAO.save(new StudentEntity(dto.getSid(),dto.getName(),dto.getAddress(),dto.getContact(),dto.getDob(),dto.getGender()));
+        return false;
     }
 
     @Override
-    public void updateStudent(StudentDTO dto) {
+    public boolean updateStudent(StudentDTO dto) {
         studentDAO.update(new StudentEntity(dto.getSid(),dto.getName(),dto.getAddress(),dto.getContact(),dto.getDob(),dto.getGender()));
 
+        return false;
     }
 
     @Override
@@ -42,9 +44,10 @@ public class StudentBOImpl implements StudentBO {
     }
 
     @Override
-    public void deleteStudent(String id) {
+    public boolean deleteStudent(String id) {
         studentDAO.delete(id);
 
+        return false;
     }
 
     @Override

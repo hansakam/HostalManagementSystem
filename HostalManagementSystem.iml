@@ -36,5 +36,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="TrayTester" level="project" />
+    <orderEntry type="library" name="controlsfx-8.40.11 (1)" level="project" />
   </component>
 </module>
